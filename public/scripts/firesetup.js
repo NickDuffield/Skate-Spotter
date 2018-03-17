@@ -13,7 +13,7 @@ var globalDbRef;
     messagingSenderId: "852736444003"
   };
   firebase.initializeApp(config);
-  //reference to database
+  //reference to database. MAY WANT TO MOVE THIS OUT OF HERE???
   var databaseRef = firebase.database().ref('public-spots');
   globalDbRef = databaseRef;
 
