@@ -6,14 +6,28 @@
     <title>Skate Spotter - Search and destroy</title>
     <!--css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/map.css">
+    <link rel="stylesheet" type="text/css" href="css/temporary.css">
 
   </head>
   <body>
 
-    <p>Great things are coming your way...</p>
+    <div id="map"></div>
+
+    <!--<div class="custom-file mx-3 mb-3 temp-width">
+      <input id="fileButton" type="file" value="upload" class="custom-file-input">
+      <label class="custom-file-label" for="fileButton">Add image</label>
+    </div>
+    <progress value="0" max="100" id="uploader" class="temp-width">0%</progress>-->
+
 
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <!--firebase config-->
     <script src="scripts/firesetup.js"></script>
+    <!--<script src="scripts/send-data.js"></script>-->
+    <!--map config -->
+      <script src="scripts/mapsetup.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjTtgujM1GTiHHAy2OH5830GzCpt5UBsQ&callback=initMap" type="text/javascript"></script>
+
   </body>
 </html>

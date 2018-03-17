@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>marker-park</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-25.0%" y="-150.0%" width="150.0%" height="400.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <rect id="path-2" x="6" y="5" width="24" height="24" rx="3"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="marker-park">
+            <ellipse id="Oval" fill-opacity="0.5" fill="#000000" filter="url(#filter-1)" cx="18" cy="33" rx="6" ry="1"></ellipse>
+            <g id="Rectangle" transform="translate(18.000000, 17.000000) rotate(45.000000) translate(-18.000000, -17.000000) ">
+                <use fill="#FF9800" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <rect stroke="#000000" stroke-width="1" x="6.5" y="5.5" width="23" height="23" rx="3"></rect>
+            </g>
+            <path d="M13.6377909,12.7491226 C14.0041749,12.3353936 14.741884,12 15.2990793,12 L20.702514,12 C21.2536342,12 21.999394,12.3376245 22.3638023,12.7491226 L26.5695303,17.4983244 C27.3039761,18.3276769 26.9972773,19 25.8921607,19 L10.1094326,19 C9.00088586,19 8.69661321,18.3288106 9.43206292,17.4983244 L13.6377909,12.7491226 Z" id="Rectangle-2" fill="#000000"></path>
+        </g>
+    </g>
+</svg>

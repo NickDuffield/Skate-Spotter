@@ -1,0 +1,13 @@
+/* Temporary css */
+
+#uploader {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 16px;
+  width: 50%;
+  /*visibility: hidden;*/
+}
+
+.temp-width {
+  width: 50%;
+}
