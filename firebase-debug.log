@@ -1,0 +1,32 @@
+[debug] [2018-03-17T14:44:18.330Z] ----------------------------------------------------------------------
+[debug] [2018-03-17T14:44:18.332Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-03-17T14:44:18.332Z] CLI Version:   3.17.6
+[debug] [2018-03-17T14:44:18.332Z] Platform:      darwin
+[debug] [2018-03-17T14:44:18.332Z] Node Version:  v8.9.4
+[debug] [2018-03-17T14:44:18.332Z] Time:          Sat Mar 17 2018 14:44:18 GMT+0000 (GMT)
+[debug] [2018-03-17T14:44:18.332Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-17T14:44:18.343Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-17T14:44:18.343Z] > authorizing via signed-in user
+[debug] [2018-03-17T14:44:18.345Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/skate-spotter-51441  
+  
+ Sat Mar 17 2018 14:44:18 GMT+0000 (GMT)
+[debug] [2018-03-17T14:44:18.985Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-17T14:44:18.986Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/skate-spotter-51441/tokens  
+  
+ Sat Mar 17 2018 14:44:18 GMT+0000 (GMT)
+[debug] [2018-03-17T14:44:20.098Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-17T14:44:20.099Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/skate-spotter-51441  
+  
+ Sat Mar 17 2018 14:44:20 GMT+0000 (GMT)
+[debug] [2018-03-17T14:44:20.797Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Nick/Desktop/repos/Skate-Spotter'...
+[info] 
+[debug] [2018-03-17T14:44:20.800Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/852736444003/clients/_:getWebAppConfig  
+  
+ Sat Mar 17 2018 14:44:20 GMT+0000 (GMT)
+[debug] [2018-03-17T14:44:21.678Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
