@@ -14,10 +14,10 @@ function initMap() {
   //getGeolocation();
 }
 
-//Gets users geolocation
 //global var for current location
 var currentPosition;
 
+//Gets users geolocation
 function getGeolocation(){
     //geolocation - current position info window. MAY NOT NEED THIS
     youAreHere = new google.maps.InfoWindow;

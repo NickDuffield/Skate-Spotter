@@ -1,7 +1,8 @@
-//uploads spot information to database
+//gets controls for upload in dom
 var uploader = document.getElementById('uploader');
 var fileButton = document.getElementById('fileButton');
 
+//add event listener to file upload
 fileButton.addEventListener('change', function(e){
   //get file reference from file input event
   var file = e.target.files[0];
@@ -9,6 +10,7 @@ fileButton.addEventListener('change', function(e){
   var storageRef = firebase.storage().ref('starter-images/' + file.name);
   //upload file to storage location
   var task = storageRef.put(file);
+
   //monitor the status of my upload and update progress bar
   task.on('state_changed',
     //displays status of image upload on progress bar

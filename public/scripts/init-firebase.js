@@ -1,6 +1,3 @@
-//global varaiables
-//var globalDbRef;
-
 //connect to firebase
 (function(){
   //Initialize Firebase
@@ -14,7 +11,7 @@
   };
   firebase.initializeApp(config);
 
-  //request data
-  getSpots();
+  //request firebase data(spots)
+  spotsGet();
 
 }());

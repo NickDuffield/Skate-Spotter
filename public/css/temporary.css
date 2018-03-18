@@ -1,5 +1,6 @@
 /* Temporary css */
 
+/* panels for adding and displaying spots */
 #spot-viewer {
   border-left: 1px solid #ccc;
   background-color: white;
@@ -43,7 +44,15 @@
   visibility: hidden;
 }
 
-/* temp css */
+#spot-img {
+  width: 100%;
+}
+
+.temp-width {
+  width: 417px;
+}
+
+/* infowindow styles */
 .map-spot-marker-title {
   font-size: 14px;
   font-weight: bold;
@@ -51,12 +60,4 @@
 
 .info-btn {
   padding: 0;
-}
-
-#spot-img {
-  width: 100%;
-}
-
-.temp-width {
-  width: 417px;
 }
