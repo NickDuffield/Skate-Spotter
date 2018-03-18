@@ -1,5 +1,5 @@
 //global varaiables
-var globalDbRef;
+//var globalDbRef;
 
 //connect to firebase
 (function(){
@@ -13,8 +13,8 @@ var globalDbRef;
     messagingSenderId: "852736444003"
   };
   firebase.initializeApp(config);
-  //reference to database. MAY WANT TO MOVE THIS OUT OF HERE???
-  var databaseRef = firebase.database().ref('public-spots');
-  globalDbRef = databaseRef;
+
+  //request data
+  getSpots();
 
 }());
