@@ -12,6 +12,6 @@
   firebase.initializeApp(config);
 
   //request firebase data(spots)
-  spotsGet();
+  getPublicSpots();
 
 }());
