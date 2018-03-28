@@ -1,0 +1,51 @@
+/* default panel style */
+.panel {
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 450px;
+}
+
+/* close btn style */
+#close-btn {
+  border: none;
+  background: none;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* close panel area style */
+.close-panel {
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+}
+
+/* status bar for upload */
+#uploader {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 16px;
+  /*visibility: hidden;*/
+}
+
+/* spot image style */
+#spot-img {
+  width: 100%;
+}
+
+/* panels for adding and displaying spots */
+#spot-view {
+  border-left: 1px solid #ccc;
+  right: 0px;
+  visibility: hidden;
+}
+
+/* upload panel controls */
+#spot-upload {
+  border-right: 1px solid #ccc;
+  left: 0px;
+  /*visibility: hidden;*/
+}

@@ -1,63 +1,6 @@
 /* Temporary css */
 
-/* panels for adding and displaying spots */
-#spot-viewer {
-  border-left: 1px solid #ccc;
-  background-color: white;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  width: 450px;
-  visibility: hidden;
-}
-
-#spot-uploader {
-  border-right: 1px solid #ccc;
-  background-color: white;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  width: 450px;
-  /*visibility: hidden;*/
-}
-
-#close-btn {
-  border: none;
-  background: none;
-  width: 26px;
-  height: 26px;
-  padding: 0;
-  cursor: pointer;
-}
-
-.close-panel {
-  background-color: #f1f1f1;
-  border-bottom: 1px solid #ccc;
-}
-
-#uploader {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 16px;
-  visibility: hidden;
-}
-
-#spot-img {
-  width: 100%;
-}
-
+/* hack to set width of progress bar */
 .temp-width {
   width: 417px;
-}
-
-/* infowindow styles */
-.map-spot-marker-title {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.info-btn {
-  padding: 0;
 }

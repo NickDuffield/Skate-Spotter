@@ -7,27 +7,48 @@
     <!--css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/map.css">
+    <link rel="stylesheet" type="text/css" href="css/panels.css">
     <link rel="stylesheet" type="text/css" href="css/temporary.css">
+
 
   </head>
   <body>
 
     <div id="map"></div>
-
-    <!--<div class="custom-file mx-3 mb-3 temp-width">
-      <input id="fileButton" type="file" value="upload" class="custom-file-input">
-      <label class="custom-file-label" for="fileButton">Add image</label>
+    <!--spot upload panel-->
+    <div id="spot-upload" class="panel">
+      <div class="close-panel clearfix mb-3">
+        <button type="button" class="close mt-3 mx-3 mb-3" aria-label="Close" onclick="hideSpotDetails()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="custom-file mx-3 mb-3 temp-width">
+        <input id="fileButton" type="file" value="upload" class="custom-file-input">
+        <label class="custom-file-label" for="fileButton">Add image</label>
+      </div>
+      <progress value="0" max="100" id="uploader" class="temp-width">0%</progress>
     </div>
-    <progress value="0" max="100" id="uploader" class="temp-width">0%</progress>-->
+    <!--View spot panel-->
+    <div id="spot-view" class="panel">
+      <div class="close-panel clearfix">
+      <button type="button" class="close mt-3 mx-3 mb-3" aria-label="Close" onclick="hideSpotDetails()">
+      <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <img id="spot-img" src="" class="img-fluid mb-3" alt="Responsive image">
+      <h4 id="spot-name" class="mx-3">Spot name</h4>
+    </div>
+
 
 
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <!--firebase config-->
     <script src="scripts/maps/create-markers.js"></script>
     <script src="scripts/firebase/get-public-spots.js"></script>
+    <script src="scripts/firebase/spots-push.js"></script>
+    <script src="scripts/interaction/panel-interaction.js"></script>
     <script src="scripts/firebase/init-firebase.js"></script>
 
-    <!--<script src="scripts/spots-push.js"></script>-->
 
 
     <!--map config -->

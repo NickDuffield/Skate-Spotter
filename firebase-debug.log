@@ -1,0 +1,41 @@
+[debug] [2018-03-28T12:00:18.669Z] ----------------------------------------------------------------------
+[debug] [2018-03-28T12:00:18.671Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-03-28T12:00:18.671Z] CLI Version:   3.17.6
+[debug] [2018-03-28T12:00:18.671Z] Platform:      darwin
+[debug] [2018-03-28T12:00:18.672Z] Node Version:  v8.9.4
+[debug] [2018-03-28T12:00:18.672Z] Time:          Wed Mar 28 2018 13:00:18 GMT+0100 (BST)
+[debug] [2018-03-28T12:00:18.672Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-28T12:00:18.687Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-28T12:00:18.688Z] > authorizing via signed-in user
+[debug] [2018-03-28T12:00:18.689Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-28T12:00:18.690Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/ffPteuuA8MkJxVpA7MwEG9tb8I38SMd2-P-G_GrlFj0',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Mar 28 2018 13:00:18 GMT+0100 (BST)
+[debug] [2018-03-28T12:00:18.842Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-28T12:00:18.849Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/skate-spotter-51441  
+  
+ Wed Mar 28 2018 13:00:18 GMT+0100 (BST)
+[debug] [2018-03-28T12:00:19.482Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-28T12:00:19.483Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/skate-spotter-51441/tokens  
+  
+ Wed Mar 28 2018 13:00:19 GMT+0100 (BST)
+[debug] [2018-03-28T12:00:20.154Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-28T12:00:20.156Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/skate-spotter-51441  
+  
+ Wed Mar 28 2018 13:00:20 GMT+0100 (BST)
+[debug] [2018-03-28T12:00:20.811Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Nick/Desktop/repos/Skate-Spotter'...
+[info] 
+[debug] [2018-03-28T12:00:20.813Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/852736444003/clients/_:getWebAppConfig  
+  
+ Wed Mar 28 2018 13:00:20 GMT+0100 (BST)
+[debug] [2018-03-28T12:00:21.384Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+

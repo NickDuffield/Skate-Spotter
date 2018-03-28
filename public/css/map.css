@@ -5,7 +5,19 @@ html, body {
 	padding: 0;
 }
 
+/* map view area */
 #map {
   height: 100%;
   width: 100%;
+}
+
+/* infowindow styles */
+.map-spot-marker-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* info window button to open view panel  */
+.info-btn {
+  padding: 0;
 }
