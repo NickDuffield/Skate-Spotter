@@ -1,12 +1,10 @@
-//Hide and show spot information
-//global variable for details panel
+//global variable for details panel for close function
 var spotDetailPanel;
 
 //close spot details panel from panel link
 function hideSpotDetails() {
     spotDetailPanel.classList.remove("visible");
 };
-
 
 //open spot panel and display details
 function showSpotDetails() {
