@@ -36,7 +36,7 @@ function sendData(storageRef){
   storageRef.getDownloadURL().then(function(downloadImgUrl) {
      //sample data
      var spotData = {
-       coords:{lat:52.3, lng: 0.116211},
+       coords:{lat:52.24, lng: 0.116211},
        iconImg:'assets/marker-ditch.svg',
        imgUrl:downloadImgUrl,
        spotName:'Orchard Park Skatepark'

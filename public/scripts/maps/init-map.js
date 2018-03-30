@@ -2,7 +2,7 @@
 var map;
 //map settings
 var options = {
-    center:{lat:52.2053,lng:0.1218},
+    center:{lat:52.235,lng:0.1218},
     zoom:14,
     mapTypeId:'roadmap'
 }

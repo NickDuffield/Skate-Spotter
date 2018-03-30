@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
     <title>marker-street</title>
     <desc>Created with Sketch.</desc>
     <defs>
@@ -9,14 +9,12 @@
         </filter>
         <rect id="path-2" x="6" y="5" width="24" height="24" rx="3"></rect>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="marker-street">
-            <ellipse id="Oval" fill-opacity="0.5" fill="#000000" filter="url(#filter-1)" cx="18" cy="33" rx="6" ry="1"></ellipse>
-            <g id="Rectangle" transform="translate(18.000000, 17.000000) rotate(45.000000) translate(-18.000000, -17.000000) ">
-                <use fill="#FFCA28" fill-rule="evenodd" xlink:href="#path-2"></use>
-                <rect stroke="#000000" stroke-width="1" x="6.5" y="5.5" width="23" height="23" rx="3"></rect>
-            </g>
-            <path d="M12,19 L12,13.990778 C12,13.4435864 12.455761,13 13.0024733,13 L22.9975267,13 C23.5511774,13 24,13.4509752 24,13.990778 L24,19" id="Path-2" stroke="#000000" stroke-width="2"></path>
+    <g id="marker-street" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <ellipse id="Oval" fill-opacity="0.5" fill="#000000" filter="url(#filter-1)" cx="18" cy="33" rx="6" ry="1"></ellipse>
+        <g id="Rectangle" transform="translate(18.000000, 17.000000) rotate(45.000000) translate(-18.000000, -17.000000) ">
+            <use fill="#FFCA28" fill-rule="evenodd" xlink:href="#path-2"></use>
+            <rect stroke="#000000" stroke-width="1" x="6.5" y="5.5" width="23" height="23" rx="3"></rect>
         </g>
+        <path d="M12,20 L12,14.990778 C12,14.4435864 12.455761,14 13.0024733,14 L22.9975267,14 C23.5511774,14 24,14.4509752 24,14.990778 L24,20" id="Path-2" stroke="#000000" stroke-width="2"></path>
     </g>
 </svg>
