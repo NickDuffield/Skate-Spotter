@@ -46,6 +46,15 @@
 /* upload panel controls */
 #spot-upload {
   border-right: 1px solid #ccc;
-  left: 0px;
-  /*visibility: hidden;*/
+  left: -450px;
+}
+
+.spot-upload-open {
+  left: 0px !important;
+}
+
+#add-spot-btn {
+  position: absolute;
+  bottom: 24px;
+  left: 474px;
 }

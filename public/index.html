@@ -4,25 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Skate Spotter - Search and destroy</title>
+
     <!--css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/map.css">
     <link rel="stylesheet" type="text/css" href="css/panels.css">
     <link rel="stylesheet" type="text/css" href="css/temporary.css">
-
-
   </head>
   <body>
 
+    <!--map display-->
     <div id="map"></div>
+
     <!--spot upload panel-->
     <div id="spot-upload" class="panel">
       <div class="close-panel clearfix mb-3">
-        <button type="button" class="close mt-3 mx-3 mb-3" aria-label="Close" onclick="hideSpotDetails()">
+        <button type="button" class="close mt-3 mx-3 mb-3" aria-label="Close" onclick="hideSpotUpload()">
         <span aria-hidden="true">&times;</span>
       </button>
       </div>
-
       <h4 class="mx-3 mb-3">Mark your spot</h4>
       <form>
         <!-- spot name input -->
@@ -67,7 +67,9 @@
         <!-- upload progress -->
         <progress value="0" max="100" id="uploader" class="temp-width">0%</progress>
       </form>
+      <button id="add-spot-btn" type="button" class="btn btn-primary btn-lg" onclick="showSpotUpload()">Add spot</button>
     </div>
+
     <!--View spot panel-->
     <div id="spot-view" class="panel">
       <div class="close-panel clearfix">
@@ -79,8 +81,6 @@
       <h4 id="spot-name" class="mx-3">Spot name</h4>
     </div>
 
-
-
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <!--firebase config-->
     <script src="scripts/maps/create-markers.js"></script>
@@ -89,17 +89,10 @@
     <script src="scripts/interaction/panel-interaction.js"></script>
     <script src="scripts/firebase/init-firebase.js"></script>
 
-
-
     <!--map config -->
     <script src="scripts/maps/init-map.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMp2CWHCjRuMpFPWOTgx21HpeSV0Gi8uw&callback=initMap" type="text/javascript"></script>
     <script src="scripts/maps/get-geolocation.js"></script>
-
-
-
-
-
 
   </body>
 </html>
