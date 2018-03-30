@@ -30,13 +30,10 @@ function hideSpotUpload() {
 
 //open spot panel and display details
 function showSpotUpload() {
-  //console.log('event fired');
-
   //get element
   var spotPanel = document.getElementById("spot-upload");
   //set global panel var
   spotUploadPanel = spotPanel;
   //add class to selected element
   spotPanel.classList.add("spot-upload-open");
-
 };
