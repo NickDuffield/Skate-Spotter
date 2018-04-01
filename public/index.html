@@ -24,50 +24,59 @@
         <span aria-hidden="true">&times;</span>
       </button>
       </div>
+      <!-- alert ribbon for success-->
+      <div class="alert alert-success minus-top-margin" role="alert">Fuck yeah! you did it.</div>
       <h4 class="mx-3 mb-3">Mark your spot</h4>
-      <form>
+      <!-- upload progress -->
+      <progress value="0" max="100" id="uploader" class="temp-width">0%</progress>
+
+      <form id="upload-form">
         <!-- spot name input -->
         <div class="form-group mx-3">
           <label for="inputAddress">Spot name</label>
-          <input type="text" class="form-control" id="spotName" placeholder="">
+          <input type="text" class="form-control" id="spot-name" required>
         </div>
         <!-- spot type radio group -->
+
+        <!-- @TODO need to set a required state for radio groups -->
+
         <div class="form-group mb-3">
           <div class="form-check form-check-inline ml-3">
-            <input class="form-check-input" type="radio" name="spotType" id="ditchRadio" value="ditch">
-            <label class="form-check-label" for="ditchRadio">Ditch</label>
+            <input class="form-check-input" type="radio" name="spotType" id="ditch-radio" value="ditch">
+            <label class="form-check-label" for="ditch-radio">Ditch</label>
           </div>
           <div class="form-check form-check-inline ml-3">
-            <input class="form-check-input" type="radio" name="spotType" id="diyRadio" value="diy">
-            <label class="form-check-label" for="diyRadio">DIY</label>
+            <input class="form-check-input" type="radio" name="spotType" id="diy-radio" value="diy">
+            <label class="form-check-label" for="diy-radio">DIY</label>
           </div>
           <div class="form-check form-check-inline ml-3">
-            <input class="form-check-input" type="radio" name="spotType" id="parkRadio" value="park">
-            <label class="form-check-label" for="parkRadio">Park</label>
+            <input class="form-check-input" type="radio" name="spotType" id="park-radio" value="park">
+            <label class="form-check-label" for="park-radio">Park</label>
           </div>
         </div>
         <div class="form-group">
           <div class="form-check form-check-inline ml-3">
-            <input class="form-check-input" type="radio" name="spotType" id="poolRadio" value="pool">
-            <label class="form-check-label" for="poolRadio">Pool</label>
+            <input class="form-check-input" type="radio" name="spotType" id="pool-radio" value="pool">
+            <label class="form-check-label" for="pool-radio">Pool</label>
           </div>
           <div class="form-check form-check-inline ml-3">
-            <input class="form-check-input" type="radio" name="spotType" id="rampRadio" value="ramp">
-            <label class="form-check-label" for="rampRadio">Ramp</label>
+            <input class="form-check-input" type="radio" name="spotType" id="ramp-radio" value="ramp">
+            <label class="form-check-label" for="ramp-radio">Ramp</label>
           </div>
           <div class="form-check form-check-inline ml-3">
-            <input class="form-check-input" type="radio" name="spotType" id="streetRadio" value="street">
-            <label class="form-check-label" for="streetRadio">Street</label>
+            <input class="form-check-input" type="radio" name="spotType" id="street-radio" value="street">
+            <label class="form-check-label" for="street-radio">Street</label>
           </div>
         </div>
         <!-- file uploader -->
-        <div class="custom-file mx-3 mb-3 temp-width">
-          <input id="fileButton" type="file" value="upload" class="custom-file-input">
+        <div class="custom-file mx-3 mb-5 temp-width">
+          <input id="spot-img" type="file" value="upload" class="custom-file-input">
           <label class="custom-file-label" for="fileButton">Add image</label>
         </div>
-        <!-- upload progress -->
-        <progress value="0" max="100" id="uploader" class="temp-width">0%</progress>
+        <button id="submit-spot" type="submit" class="btn btn-primary mx-3 mb-3">Upload your spot</button>
+        <button id="cancel-upload" type="button" class="btn btn-secondary mb-3">Cancel</button>
       </form>
+
       <button id="add-spot-btn" type="button" class="btn btn-primary btn-lg" onclick="showSpotUpload()">Add spot</button>
     </div>
 
@@ -78,8 +87,8 @@
       <span aria-hidden="true">&times;</span>
       </button>
       </div>
-      <img id="spot-img" src="" class="img-fluid mb-3" alt="Responsive image">
-      <h4 id="spot-name" class="mx-3">Spot name</h4>
+      <img id="spot-img-display" src="" class="img-fluid mb-3" alt="Responsive image">
+      <h4 id="spot-name-display" class="mx-3">Spot name</h4>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>

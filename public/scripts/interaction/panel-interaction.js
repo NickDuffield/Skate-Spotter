@@ -15,9 +15,9 @@ function showSpotDetails() {
   //add class to selected element
   spotDetailPanel.classList.add("visible");
   //set panel spotname
-  document.getElementById("spot-name").innerHTML = pubSpotInfo.spotName;
+  document.getElementById("spot-name-display").innerHTML = pubSpotInfo.spotName;
   //set panel spotname
-  document.getElementById("spot-img").src = pubSpotInfo.imgUrl;
+  document.getElementById("spot-img-display").src = pubSpotInfo.imgUrl;
 };
 
 //global variable for details panel for close function

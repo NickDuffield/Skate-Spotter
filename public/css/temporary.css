@@ -4,3 +4,11 @@
 .temp-width {
   width: 417px;
 }
+
+.minus-top-margin {
+  margin-top: -1rem;
+}
+
+.alert {
+  border-radius: 0px;
+}

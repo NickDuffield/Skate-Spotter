@@ -1,9 +1,11 @@
 //gets controls for upload in dom
 var uploader = document.getElementById('uploader');
-var fileButton = document.getElementById('fileButton');
+var spotImg = document.getElementById('spot-img');
+
+// @TODO need to use a submit event for the upload.  
 
 //add event listener to file upload
-fileButton.addEventListener('change', function(e){
+spotImg.addEventListener('change', function(e){
   //get file reference from file input event
   var file = e.target.files[0];
   //create reference to storage folders
