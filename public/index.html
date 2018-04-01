@@ -34,7 +34,7 @@
         <!-- spot name input -->
         <div class="form-group mx-3">
           <label for="inputAddress">Spot name</label>
-          <input type="text" class="form-control" id="spot-name" required>
+          <input type="text" class="form-control" name="spotName" id="spot-name" required>
         </div>
         <!-- spot type radio group -->
 
@@ -91,13 +91,19 @@
       <h4 id="spot-name-display" class="mx-3">Spot name</h4>
     </div>
 
+    <!-- @TODO need to figure out the order of these scripts -->
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <!--firebase config-->
-    <script src="scripts/maps/create-markers.js"></script>
+
     <script src="scripts/firebase/get-public-spots.js"></script>
-    <script src="scripts/firebase/spots-push.js"></script>
+
+    <script src="scripts/maps/create-markers.js"></script>
+
     <script src="scripts/interaction/panel-interaction.js"></script>
+
     <script src="scripts/firebase/init-firebase.js"></script>
+
+    <script src="scripts/firebase/spots-push.js"></script>
+
 
     <!--map config -->
     <script src="scripts/maps/init-map.js"></script>

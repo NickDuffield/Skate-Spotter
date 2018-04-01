@@ -1,14 +1,21 @@
 //reference to database for push
-var globalDbRef;
+//var globalDbRef;
+
+//reference to database
+//var publicSpotsRef = firebase.database().ref('public-spots');
 
 //retrieves spots from firebase and pins markers to the map
 function getPublicSpots(){
+
+  var publicSpotsRef = firebase.database().ref('public-spots');
+
   //reference to database
-  var databaseRef = firebase.database().ref('public-spots');
+  //var databaseRef = firebase.database().ref('public-spots');
   //create global reference to database
-  globalDbRef = databaseRef;
+  //globalDbRef = databaseRef;
+  
   //when a value changes one of the listed functions is called
-  databaseRef.on('value', setPubSpotsData, errPubSpotsData);
+  publicSpotsRef.on('value', setPubSpotsData, errPubSpotsData);
 
   //This gets data and loops through it
   function setPubSpotsData(data) {
