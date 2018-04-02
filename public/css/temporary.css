@@ -11,4 +11,5 @@
 
 .alert {
   border-radius: 0px;
+  display: none;
 }

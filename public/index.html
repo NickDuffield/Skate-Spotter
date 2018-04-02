@@ -25,7 +25,7 @@
       </button>
       </div>
       <!-- alert ribbon for success-->
-      <div class="alert alert-success minus-top-margin" role="alert">Fuck yeah! you did it.</div>
+      <div id="upload-confirmation-message" class="alert alert-success minus-top-margin" role="alert">Fuck yeah! you did it.</div>
       <h4 class="mx-3 mb-3">Mark your spot</h4>
       <!-- upload progress -->
       <progress value="0" max="100" id="uploader" class="temp-width">0%</progress>
@@ -34,7 +34,7 @@
         <!-- spot name input -->
         <div class="form-group mx-3">
           <label for="inputAddress">Spot name</label>
-          <input type="text" class="form-control" name="spotName" id="spot-name" required>
+          <input type="text" class="form-control" id="spot-name" required>
         </div>
         <!-- spot type radio group -->
 
@@ -42,7 +42,7 @@
 
         <div class="form-group mb-3">
           <div class="form-check form-check-inline ml-3">
-            <input class="form-check-input" type="radio" name="spotType" id="ditch-radio" value="ditch">
+            <input class="form-check-input" type="radio" name="spotType" id="ditch-radio" value="ditch" required>
             <label class="form-check-label" for="ditch-radio">Ditch</label>
           </div>
           <div class="form-check form-check-inline ml-3">
