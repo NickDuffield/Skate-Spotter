@@ -4,6 +4,57 @@ var testPublicSpotsRef = firebase.database().ref('public-spots');
 // listen for form submit
 document.getElementById('upload-form').addEventListener('submit', uploadSpot);
 
+// @TODO got my file variable ready for upload
+// next steps create object ready for database push
+// create object by making choices in the form
+var imgFile;
+
+document.getElementById('spot-img').addEventListener('change', function(e){
+  //get file reference from file input event
+  var file = e.target.files[0];
+
+  imgFile = file;
+
+
+
+  console.log(imgFile);
+
+  /*
+  //create reference to storage folders
+  var storageRef = firebase.storage().ref('starter-images/' + file.name);
+  //upload file to storage location
+  var task = storageRef.put(file);
+
+  //monitor the status of my upload and update progress bar
+  task.on('state_changed',
+    //displays status of image upload on progress bar
+    function progress(snapshot){
+      var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      uploader.value = percentage;
+    },
+    //handles upload errors
+    function error(err){
+      //do something
+    },
+    //runs functions on complete state
+    function complete(){
+      //call function to send data to firebase
+      //sendData(storageRef);
+
+      //retrieves download url for image upload
+      storageRef.getDownloadURL().then(function(downloadImgUrl) {
+
+        testVar = downloadImgUrl;
+
+       }).catch(function(error) {
+         // Handle any errors with returned downloadURL
+       });
+
+
+    }
+  );*/
+});
+
 function uploadSpot(e) {
   e.preventDefault();
 
@@ -46,6 +97,8 @@ function getInputVal(id) {
   return document.getElementById(id).value;
 }
 
+
+
 // save message to firebase
 function saveSpot(coords, iconImg, imgUrl, spotName) {
 
@@ -59,6 +112,10 @@ function saveSpot(coords, iconImg, imgUrl, spotName) {
   });
 
 }
+
+
+
+
 
 /*
 
