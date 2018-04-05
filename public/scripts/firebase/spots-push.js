@@ -1,21 +1,24 @@
 // @TODO general tidy some of this up into small functions
 
-// reference to spots collection in database
-var testPublicSpotsRef = firebase.database().ref('public-spots');
-
-// sets spot image file outside of function
+// sets spot image file outside of function - see line 91
 var spotFile
 
-// sets iconImg outside of function
+// sets iconImg outside of function - see line 28 and 56
 var iconImg;
 
-// reference to uploader element status
-var uploader = document.getElementById('uploader');
+
+
+
+
+// FUNCTION NUMBER 1
 
 // listen for form submit
 document.getElementById('upload-form').addEventListener('submit', uploadSpotImg);
 
 function uploadSpotImg(e) {
+
+  //WHAT DOES THIS BLOCK DO???
+
   e.preventDefault();
 
   // sets spotname variable
@@ -36,15 +39,26 @@ function uploadSpotImg(e) {
     }
   }
 
+  // THIS CHUNK ENDS HERE ^
+
+
+  // SHOULD THIS BE INSIDE HERE???
+  // COULD THIS BE A CALLED FUNCTION
+
   //create reference to storage folders
   var spotImgCollection = firebase.storage().ref('starter-images/' + spotFile.name);
 
   //upload file to storage location
   var taskRef = spotImgCollection.put(spotFile);
+
   //monitor the status of my upload and update progress bar
   taskRef.on('state_changed',
     //displays status of image upload on progress bar
     function progress(snapshot){
+
+      // reference to uploader element status - see line 49
+      var uploader = document.getElementById('uploader');
+
       var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
       uploader.value = percentage;
     },
@@ -66,7 +80,7 @@ function uploadSpotImg(e) {
         }
 
         // sets captured data
-        testPublicSpotsRef.push(spotData);
+        firebase.database().ref('public-spots').push(spotData);
 
         // @TODO set success alert here
         //sets notification alert for success if desired
@@ -79,6 +93,8 @@ function uploadSpotImg(e) {
       });
     }
   );
+
+  // TASK REF ENDS HERE
 
 }
 

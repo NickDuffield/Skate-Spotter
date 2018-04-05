@@ -1,20 +1,29 @@
+// @TODO general tidy some of this up into small functions
+
 // reference to spots collection in database
 var testPublicSpotsRef = firebase.database().ref('public-spots');
 
-// listen for form submit
-document.getElementById('upload-form').addEventListener('submit', uploadSpot);
+// sets spot image file outside of function
+var spotFile
 
-function uploadSpot(e) {
+// sets iconImg outside of function
+var iconImg;
+
+// reference to uploader element status
+var uploader = document.getElementById('uploader');
+
+// listen for form submit
+document.getElementById('upload-form').addEventListener('submit', uploadSpotImg);
+
+function uploadSpotImg(e) {
   e.preventDefault();
 
-  // get values
-  var coords = {lat:52.28, lng: 0.116211}; // @TODO 2. need to find the best way to capture users position
-  var iconImg;
-  var imgUrl = "https://firebasestorage.googleapis.com/v0/b/skate-spotter-51441.appspot.com/o/starter-images%2F1408882415497.jpg?alt=media&token=906603cd-2250-4f3f-8314-98f727787ed5"; // @TODO 1. need to refactor code to set this to select file, capture download url then set message
+  // sets spotname variable
   var spotName = getInputVal('spot-name');
 
   // capture radio button group
   var spotRadios = document.getElementsByName('spotType');
+
   // loop through radios to capture value
   for (var i = 0, length = spotRadios.length; i < length; i++) {
     if (spotRadios[i].checked) {
@@ -27,17 +36,49 @@ function uploadSpot(e) {
     }
   }
 
-  saveSpot(coords, iconImg, imgUrl, spotName);
+  //create reference to storage folders
+  var spotImgCollection = firebase.storage().ref('starter-images/' + spotFile.name);
 
-  // show confimation message
-  var uploadConfirmation = document.getElementById('upload-confirmation-message');
-  uploadConfirmation.style.display = 'block'
+  //upload file to storage location
+  var taskRef = spotImgCollection.put(spotFile);
+  //monitor the status of my upload and update progress bar
+  taskRef.on('state_changed',
+    //displays status of image upload on progress bar
+    function progress(snapshot){
+      var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      uploader.value = percentage;
+    },
+    //handles upload errors
+    function error(err){
+      alert('Are you fucking shitting me. Upload failed, you need to try again bro.');
+    },
+    //runs functions on complete state
+    function complete(){
+      //retrieves download url for image upload
+      spotImgCollection.getDownloadURL().then(function(downloadImgUrl) {
 
-  // @TODO this needs to happen after the full upload is complete
-  // hide alert after 3 seconds
-  setTimeout(function(){
-    uploadConfirmation.style.display = 'none'
-  }, 3000);
+        //sample data
+        var spotData = {
+          coords: {lat:52.3, lng: 0.116211}, // @TODO juat this left to set
+          iconImg: iconImg,
+          imgUrl: downloadImgUrl,
+          spotName: spotName
+        }
+
+        // sets captured data
+        testPublicSpotsRef.push(spotData);
+
+        // @TODO set success alert here
+        //sets notification alert for success if desired
+        //alert('Get the fuck out of here. It worked!');
+
+      }).catch(function(error) {
+
+        // @TODO set failure status here
+      // Handle any errors with returned downloadURL
+      });
+    }
+  );
 
 }
 
@@ -46,18 +87,7 @@ function getInputVal(id) {
   return document.getElementById(id).value;
 }
 
-
-
-// save message to firebase
-function saveSpot(coords, iconImg, imgUrl, spotName) {
-
-  var newSpotRef = testPublicSpotsRef.push();
-
-  newSpotRef.set({
-    coords: coords,
-    iconImg: iconImg,
-    imgUrl: imgUrl,
-    spotName: spotName
-  });
-
-}
+// event listener to set spot image upload variable
+spotImageBtn.addEventListener('change', function(e){ // TODO: This needs refactoring for spot data upload
+  spotFile = e.target.files[0];
+});
