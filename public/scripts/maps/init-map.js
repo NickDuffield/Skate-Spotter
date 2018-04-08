@@ -3,7 +3,7 @@ var map;
 //map settings
 var options = {
     center:{lat:52.235,lng:0.1218},
-    zoom:14,
+    zoom:12,
     mapTypeId:'roadmap'
 }
 //initilize google map
